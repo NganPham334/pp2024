@@ -82,17 +82,24 @@ def list_functions():
       else: list_functions()
 
 
+def strike(text):
+      result = ''
+      for c in text:
+            result = result + c + '\u0336'
+      return result
+
 def main():
+      print(strike("-----------------------------"))
       print("Student management menu: \n"
             "1. Input Functions\n"
             "2. Listing Functions\n"
             "3. Quit")
-
       option = input("Select: ")
+      print(strike("-----------------------------"))
       if option == "1": input_functions()
       if option == "2": list_functions()
       if option == "3": return
-      else: main()
+      main()
 
 if __name__ == "__main__":
     main()
